@@ -1,82 +1,97 @@
-// Write a code to convert celsius to fahrenheit.
-let celsius = 20;
-let fahrenheit = (celsius * 9) / 5 + 32;
-console.log(`${celsius}°C is ${fahrenheit}°F `);
+function change (c) {
+    let F = ((9 / 5) * c) + 32;
+    return console.log(`$(c) celsius adalah ${F}`);
+}
 
-// Write a code to check whether the number is odd or even
-let number = 5;
+change(90);
 
-console.log(number % 2 == 0 ? `${number} is even` : `${number} is odd`);
-// Write a code to check whether the number is prime number or not
+function oddOrEven (num) {
+    if (num % 2 == 0) {
+        console.log('the number is even');
+    } else if (num % 1 == 0) {
+        console.log("number is odd");
+    }
+}
+
+oddOrEven(19);
+oddOrEven(10);
+
+// angka bilangan prima hanya bisa diagi 1 dan dirinya sendiri (hanya ada 2 faktor)
+
+let factor = 0;
+function determPrime(numb) {
+    for (let f = 1; f <= numb / 2; f++) {
+        if (numb % f == 0) {
+            factor++
+        }
+    }
+    if (factor == 2) {
+        console.log("the number is a prime number");
+    } else {
+        console.log("the number is not a prime number");
+    }
+}
+determPrime(9);
+
+function totalSum(N) {
+    let Total = 0;
+    for (sum = 0; sum <= N; sum++) {
+        Total += sum;
+    }
+    return console.log(Total);
+}
+totalSum(4);
+
+// faktorial contoh 5: 1x2x3x4x5 =120
+// Deklarasi VAR faktor dari 1
+// buat FOR loop dengan turunan dari 1, kurang dari sama dengan bilangan, dan turunan di Increment
+// setiap loop  faktor di kali turunan bilangan
+const number = -10;
+if (number < 0) {
+    console.log("the factorial for negative numbers doesn't exist");
+} else if (number === 0) {
+    console.log(`the factorial of ${number} is 1.`);
+} else {
+    let fact = 1
+    for (fc = 1; fc <= number; fc++) {
+        fact *= fc;
+    }
+    console.log(`the factorial of ${number} is ${fact}`);
+};
+
+//fibbonaci 0 1 1 2 3 5 8 13 21
+//n1 = 0, n2 = 1, dan nnext = n1 + n2
+// buat FUNC dengan parameter nFib
+// n1 = n2, n2 = nnext, nnext = n1 + n2
+let n1 = 0;
+let n2 = 1;
+let nNext = n1 + n2;
+function fib (nFib) {
+    console.log(n1)
+    for (let i = 1; i <= nFib; i++){
+        console.log(nNext);
+        nNext = n1 + n2;
+        n1 = n2;
+        n2 = nNext;
+    }
+}
+fib(10);
+
+const convert = function (celcius) {
+    let farenheit = ((9 / 5) * celcius) + 32;
+    console.log(`${celcius} °C = ${farenheit} °F`);
+}
+convert(0)
+const evenCheck = (eoo) => (eoo % 2 == 0) ? `${eoo} is an even number` : `${eoo} is an oddnumber`;
+
+console.log(evenCheck(1));
+let ns = 2
 let prime = true;
-
-if (number == 0 || number == 1) prime = false;
-
-//5.5
-// 5.5 % 2 == 0? bukan prima
-// 5.5 % 3
-// 5.5 % 4
-// 5.5 % 5
-// 5.5 % 6
-for (let i = 2; i <= number / 2; ++i) {
- if (number % i == 0) {
-  prime = false;
-  break;
- }
+if (ns == 0 || ns == 1) prime = false;
+for (let i = 2; i <= ns / 2; ++i) {
+    if (ns % i == 0) {
+        prime = false;
+        break;
+    }
 }
-prime
- ? console.log(number + ' is a prime number.')
- : console.log(number + ' is not a prime number.');
-
-// Write a code to find the sum of the numbers 1 to N.
-// Example : 5 → 1 + 2 + 3 + 4 + 5 = 15
-
-let sum = 0;
-let text = `${number} → `;
-for (let i = 1; i <= number; i++) {
- i == 1 ? (text += ` ${i}`) : (text += ` + ${i}`);
- sum += i;
-}
-// text = 11 -> 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11
-// sum = 66
-//  text = 11 -> 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 = 66
-
-console.log(text + ' = ' + sum);
-
-// Write a code to find factorial of a number.
-let factorial = 1;
-// n = n * (n-1) ( n-2) (n-3)...
-// 5 = 5 * 4 * 3 * 2 * 1
-text = `${number} → `;
-
-//i = 1
-// 2 <= 5
-// 5 -> 1 x 2 x 3 x 4 x 5
-// factorial = 120
-
-for (let i = 1; i <= number; i++) {
- i == 1 ? (text += ` ${i}`) : (text += ` x ${i}`);
- factorial = factorial * i;
-}
-console.log(`Factorial of ${text} = ${factorial}`);
-
-// Write a code to print the first N fibonacci numbers.
-
-// 0, 1 , 1 ,2 ,3 , 5
-let temp1 = 0,
- temp2 = 1,
- temp3 = 0;
-number = 10;
-text = `${number} number(s) of fibonnaci :  ${temp1}, ${temp2}`;
-for (let i = 2; i < number; ++i) {
- temp3 = temp1 + temp2;
- text += `, ${temp3}`;
- temp1 = temp2;
- temp2 = temp3;
-}
-// 10 number(s) of fibonnaci :  0, 1, 1, 2, 3, 5, 8, 13, 21, 34
-// 10 < 10
-// temp3 = 34
-//temp1 = 21
-//temp2 = 34
-console.log(text);
+prime ? console.log(`${ns} is a prime number.`) : console.log(`${ns} is not a prime number.`);

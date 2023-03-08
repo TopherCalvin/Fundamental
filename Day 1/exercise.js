@@ -32,7 +32,7 @@ console.log(triangle(70, 30));
 let date1 = new Date('2023-03-01');
 let date2 = new Date('2023-03-03');
 let diff = (date2 - date1)
-console.log(different);
+console.log(diff);
 //convert days to years, months and days
 function timeFormat(days) {
     let year1 = parseInt(days / 365) + " year "

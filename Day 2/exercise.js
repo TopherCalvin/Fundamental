@@ -85,7 +85,7 @@ convert(0)
 const evenCheck = (eoo) => (eoo % 2 == 0) ? `${eoo} is an even number` : `${eoo} is an oddnumber`;
 
 console.log(evenCheck(1));
-let ns = 2
+let ns = 9
 let prime = true;
 if (ns == 0 || ns == 1) prime = false;
 for (let i = 2; i <= ns / 2; ++i) {
@@ -95,3 +95,44 @@ for (let i = 2; i <= ns / 2; ++i) {
     }
 }
 prime ? console.log(`${ns} is a prime number.`) : console.log(`${ns} is not a prime number.`);
+
+//5 → 1 + 2 + 3 + 4 + 5 = 15
+let a = 0;
+let su = function (nn) {
+    let fin = `${nn} →`
+    for (let i = 1; i <= nn; ++i) {
+        i == 1 ? fin += ` ${i}` : fin += `+ ${i}`
+        a += i;
+    }
+    console.log(fin + " = " + a);
+}
+su(3)
+let fac = 1;
+let fa = function (ff) {
+    let fff = `${ff} =`
+    if (ff < 0) {
+        console.log('the factorial for negative number doesn\'t exist');
+    } else if (ff == 0) {
+        console.log('the factorial for the number 0 is 1')
+    } else {
+        for (let i = 1; i <= ff; ++i) {
+            i == 1 ? fff += ` ${i}` : fff += ` x ${i}`
+            fac *= i;
+        }
+    }
+    console.log(`${fff} = ${fac}`);
+}
+fa(5)
+
+let temp1 = 0, temp2 = 1, temp3 = 0;
+let fibs = function (tms) {
+    let row = `${tms} row of fibbonachi numbers are ${temp1}, ${temp2}`;
+    for (let i = 2; i <= tms; ++i) {
+        temp3 = temp1 + temp2;
+        row += `, ${temp3}`;
+        temp1 = temp2;
+        temp2 = temp3;
+    }
+    return row;
+}
+console.log(fibs(5));

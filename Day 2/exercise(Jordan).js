@@ -32,7 +32,7 @@ prime
 // Example : 5 → 1 + 2 + 3 + 4 + 5 = 15
 
 let sum = 0;
-let text = `${number} → `;
+let text = `${number} →`;
 for (let i = 1; i <= number; i++) {
  i == 1 ? (text += ` ${i}`) : (text += ` + ${i}`);
  sum += i;

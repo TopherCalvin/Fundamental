@@ -14,4 +14,6 @@ class Transaction extends Product {
         total = price * qty;
     }
 }
-const product1 = new Transaction ("pill biru", )
+const product1 = new Product ("pill biru", 5000);
+const product2 = new Product ("pill merah", 3000);
+const product3 = new Product ("pill kuning", 6000);

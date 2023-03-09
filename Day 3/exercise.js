@@ -104,3 +104,18 @@ for (let i = 0; i < 5; i++) {
     console.log(a)
 }
 
+const integer = function (multiply) {
+    for (let i = 1; i <= 10; ++i) {
+        console.log(`${multiply} x ${i} = ${multiply * i}`)
+    }
+}
+integer(10);
+
+let paldet = function (stri) {
+    let rev = "";
+    for (let i = stri.length; i >= 0; --i) {
+        rev += stri.charAt[i];
+    }
+    return stri == rev ? `${stri} is a plalindrome` : `${stri} is not a palindrome`
+}
+console.log(paldet("kodok"));

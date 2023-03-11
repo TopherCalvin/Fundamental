@@ -111,11 +111,33 @@ const integer = function (multiply) {
 }
 integer(10);
 
-let paldet = function (stri) {
-    let rev = "";
-    for (let i = stri.length; i >= 0; --i) {
-        rev += stri.charAt[i];
-    }
-    return stri == rev ? `${stri} is a plalindrome` : `${stri} is not a palindrome`
+let paldet = function (strin) {
+    let strg = strin.toLowerCase(/ /g);
+    let revs = strg.replace(/" "/g, "").split("").reverse().join("");
+    strg === revs ? console.log("palindrome") : console.log("not palindrome")
 }
-console.log(paldet("kodok"));
+paldet("kasurRUSAK");
+
+const CmKm = function (centi) {
+    kiloM = centi / 100000;
+    console.log(`${centi} cm → ${kiloM} km`)
+}
+CmKm(100000)
+
+let numTIdr = (nums) => console.log(`Rp.${nums.toLocaleString('id-ID')},00`);
+numTIdr(10000000);
+
+
+
+const rmvFrs = function (clause, words) {
+    let regexp1 = new RegExp(`${words}`, 'g')
+    console.log(`${clause.replace(regexp1, "")}`)
+}
+rmvFrs("hello world hello", "ell")
+
+
+
+
+const rvrstr = (ssr) => console.log(`${ssr.split("").reverse().join("")}`)
+rvrstr("abcd")
+

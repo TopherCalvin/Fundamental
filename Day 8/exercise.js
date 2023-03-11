@@ -36,10 +36,10 @@ employee1.add(6);
 console.log(`${employee1.name}, ${employee1.total()}`) 
 
 class Player {
-    constructor (name, healt, power) {
+    constructor (name) {
         this.name = name;
-        this.healt = healt;
-        this.power = power;
+        this.healt = 100;
+        this.power = 10;
     }
     hit (player) {
         player.healt -= this.power;

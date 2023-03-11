@@ -1,4 +1,4 @@
-let n = 104;
+let n = 10;
 let tempN = n;
 let digit = '';
 let h = 0;

@@ -1,17 +1,17 @@
-let n = 10;
-let tempN = n;
-let digit = '';
+let n = 15;
+let tempN = n; //9
+let digit = "";
 let h = 0;
-let counter = 1;
+let counter = 1; //4
 
 while (true) {
- h++;
- digit += '*';
- tempN -= counter;
- counter++;
- if (tempN < 1) {
-  break;
- }
+  h++;
+  digit += "*";
+  tempN -= counter;
+  counter++;
+  if (tempN < 1) {
+    break;
+  }
 }
 console.log(digit);
 
@@ -44,70 +44,70 @@ console.log(digit);
 //11 12 13 14 15
 
 let num = 0;
-let result = '';
+let result = "";
 
 for (let i = 1; i <= h; i++) {
- let str = '';
- for (let j = 0; j < i && n > num; j++) {
-  num++;
-  if (j == 0) {
-   str = digit.slice(0, Math.ceil(digit.length - i));
-   if (num > 10 && num < 100) str += ` ${num} `;
-   else if (num > 100) str += `${num} `;
-   else str += `   ${num} `;
-  } else {
-   str += `${num} `;
+  let str = "";
+  for (let j = 0; j < i && n > num; j++) {
+    num++;
+    if (j == 0) {
+      str = digit.slice(0, Math.ceil(digit.length - i));
+      if (num > 10 && num < 100) str += ` ${num} `;
+      else if (num > 100) str += `${num} `;
+      else str += `   ${num} `;
+    } else {
+      str += `${num} `;
+    }
+    //num = 1
+    // **** *
+    // str = ****
+    // str = **** 1
+
+    //num = 2
+    // *** **
+    // str = ***
+    //str = *** 2
+
+    //num = 3
+    // str = *** 2 3
+
+    //num = 4
+    //str = **
+    //str = ** 4
+
+    //num =5
+    // str = ** 4 5
+
+    //num = 6
+    // str = ** 4 5 6
+
+    //num  = 7
+    //str = *
+    //str = * 7
+
+    //num = 8
+    //str = * 7 8
+
+    //num = 9
+    //str = * 7 8 9
+
+    //num = 10
+    //str = * 7 8 9 10
+
+    //num = 11
+    //str =
+    //str = 11
   }
-  //num = 1
-  // **** *
-  // str = ****
-  // str = **** 1
 
-  //num = 2
-  // *** **
-  // str = ***
-  //str = *** 2
-
-  //num = 3
-  // str = *** 2 3
-
-  //num = 4
-  //str = **
-  //str = ** 4
-
-  //num =5
-  // str = ** 4 5
-
-  //num = 6
-  // str = ** 4 5 6
-
-  //num  = 7
-  //str = *
-  //str = * 7
-
-  //num = 8
-  //str = * 7 8
-
-  //num = 9
-  //str = * 7 8 9
-
-  //num = 10
-  //str = * 7 8 9 10
-
-  //num = 11
-  //str =
-  //str = 11
- }
-
- //  str =  '**** 1
- //          '
- // result = **** 1
- //          *** 2 3
- //          ** 4 5 6
- //          * 7 8 9 10
- //          11
- str += '\n';
- result += str;
+  //  str =  '**** 1
+  //          '
+  // result = **** 1
+  //          *** 2 3
+  //          ** 4 5 6
+  //          * 7 8 9 10
+  //          11
+  str += "\n";
+  result += str;
 }
 
 console.log(result);

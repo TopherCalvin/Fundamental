@@ -3,11 +3,11 @@
 // DECLARE Result = n x i
 // PRINT string literal n x i = result
 function mult(n) {
-    for (let i = 1; i <= 10; ++i) {
-        let result = n * i;
-        console.log(`${n} x ${i} = ${result}`);
-    };
-};
+  for (let i = 1; i <= 10; ++i) {
+    let result = n * i;
+    console.log(`${n} x ${i} = ${result}`);
+  }
+}
 mult(7);
 
 //DECLARE FUNCTION palindromeChecker(Pal)
@@ -24,11 +24,15 @@ function pC (k) {
 };
 pC ("kasurrusak");*/
 
-function palChe (word) {
-    let temp1 = word.split('');
-    let temp2 = temp1.reverse();
-    let reverWord = temp2.join('');
-    console.log(word === reverWord ? `${word} is a Polindrome` : `${word} is not a polindrome`)
+function palChe(word) {
+  let temp1 = word.split("");
+  let temp2 = temp1.reverse();
+  let reverWord = temp2.join("");
+  console.log(
+    word === reverWord
+      ? `${word} is a Polindrome`
+      : `${word} is not a polindrome`
+  );
 }
 palChe("kasurrusak");
 
@@ -36,25 +40,25 @@ palChe("kasurrusak");
 //DECLARE km = cm / 100000
 //PRINT N cm adalah M km
 function cmkm(cm) {
-    let km = cm / 100000;
-    return console.log(`${cm} = ${km}`);
-};
+  let km = cm / 100000;
+  return console.log(`${cm} = ${km}`);
+}
 cmkm(200000);
 
 //code to format number as currency (IDR) Example : 1000 → “Rp. 1.000,00".
 //FUNCT IDR(jumlah)
 //PRINT `${jumlah} → "Rp. ${jumlah},00"`
 function angka(uang) {
-console.log(`Rp. ${uang.toLocaleString().replace(/,/g, '.')},00`)
-};
+  console.log(`Rp. ${uang.toLocaleString().replace(/,/g, ".")},00`);
+}
 angka(20000);
 
 //code to remove the first occurrence of a given “search string” from a string Example : string = “Hello world”, search string = “ell” → “Ho world”
 //DECLARE string
 //DECLARE search string
 //REPLACE search string element within string with nothing ('').
-let string = "Hello World"
-let searchstring = "o"
+let string = "Hello World";
+let searchstring = "o";
 console.log(string.replace(searchstring, ""));
 
 //Write a code to capitalize the first letter of each word in a string Example : “hello world” → “Hello World”
@@ -66,8 +70,8 @@ console.log(string.replace(searchstring, ""));
 let sent = "I love javaScript";
 let wrd = sent.split(" ");
 for (let i = 0; i < wrd.length; i++) {
-    wrd[i] = wrd[i][0].toUpperCase() + wrd[i].substring(1);
-} 
+  wrd[i] = wrd[i][0].toUpperCase() + wrd[i].substring(1);
+}
 let final = wrd.join(" ");
 console.log(final);
 
@@ -77,10 +81,10 @@ console.log(final);
 // LET revers = arrStr.reverse()
 //LET revStr = revers.join(" ")
 function reverseString(strn) {
-    let arrStr = strn.split("");
-    let revrs = arrStr.reverse();
-    let revStr = revrs.join("");
-    return console.log(revStr);
+  let arrStr = strn.split("");
+  let revrs = arrStr.reverse();
+  let revStr = revrs.join("");
+  return console.log(revStr);
 }
 reverseString("i am ironman");
 //    1
@@ -96,48 +100,42 @@ reverseString("i am ironman");
 // PRINT a
 let num = 1;
 for (let i = 0; i < 5; i++) {
-    let a = "     ";
-    for (let j = 0; j <= i; j++) {
-        a = a.replace(a[0], "");
-        a += num++ + " ";
-    }
-    console.log(a)
+  let a = "     ";
+  for (let j = 0; j <= i; j++) {
+    a = a.replace(a[0], "");
+    a += num++ + " ";
+  }
+  console.log(a);
 }
 
 const integer = function (multiply) {
-    for (let i = 1; i <= 10; ++i) {
-        console.log(`${multiply} x ${i} = ${multiply * i}`)
-    }
-}
+  for (let i = 1; i <= 10; ++i) {
+    console.log(`${multiply} x ${i} = ${multiply * i}`);
+  }
+};
 integer(10);
 
 let paldet = function (strin) {
-    let strg = strin.toLowerCase(/ /g);
-    let revs = strg.replace(/" "/g, "").split("").reverse().join("");
-    strg === revs ? console.log("palindrome") : console.log("not palindrome")
-}
+  let strg = strin.toLowerCase(/ /g);
+  let revs = strg.replace(/" "/g, "").split("").reverse().join("");
+  strg === revs ? console.log("palindrome") : console.log("not palindrome");
+};
 paldet("kasurRUSAK");
 
 const CmKm = function (centi) {
-    kiloM = centi / 100000;
-    console.log(`${centi} cm → ${kiloM} km`)
-}
-CmKm(100000)
+  kiloM = centi / 100000;
+  console.log(`${centi} cm → ${kiloM} km`);
+};
+CmKm(100000);
 
-let numTIdr = (nums) => console.log(`Rp.${nums.toLocaleString('id-ID')},00`);
+let numTIdr = (nums) => console.log(`Rp.${nums.toLocaleString("id-ID")},00`);
 numTIdr(10000000);
 
-
-
 const rmvFrs = function (clause, words) {
-    let regexp1 = new RegExp(`${words}`, 'g')
-    console.log(`${clause.replace(regexp1, "")}`)
-}
-rmvFrs("hello world hello", "ell")
+  let regexp1 = new RegExp(`${words}`, "g");
+  console.log(`${clause.replace(regexp1, "")}`);
+};
+rmvFrs("hello world hello", "ell");
 
-
-
-
-const rvrstr = (ssr) => console.log(`${ssr.split("").reverse().join("")}`)
-rvrstr("abcd")
-
+const rvrstr = (ssr) => console.log(`${ssr.split("").reverse().join("")}`);
+rvrstr("abcd");
